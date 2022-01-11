@@ -1,0 +1,224 @@
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+@mixin center {
+    align-items: center;
+    justify-content: center;
+}
+@mixin font($weight, $size, $family) {
+    font: $weight $size $family;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+    
+main {
+    width: 100%;
+    height: 100%;
+    @include flex-row();
+
+    .info-side {
+        width: 50%;
+        height: 100vh;
+        @include flex-column();
+        @include center();
+        justify-content: space-around;
+        background-color: #112023;
+
+        h1 {
+            @include font(700, 40px, poppins);
+            color: white;
+        }
+        .elem1 {
+            @include flex-column();
+            @include center();
+            p {
+                width: 500px;
+                @include font(300, 16px, poppins);
+                color: white;
+                text-align: center;
+            }
+            img {
+                width: 400px;
+                height: 330px;
+                margin-top: 20px;
+            }
+        }
+
+        .keys {
+            @include flex-row();
+
+            i {
+                @include flex-column();
+                @include center();
+                width: 50px;
+                height: 50px;
+                background:#1A4C57;
+                font-size: 22px;
+                color: white;
+                border-radius: 100px;
+                margin: 0 20px;
+                cursor: pointer;
+                transition:background 500ms linear;
+
+                &:hover {
+                    background:linear-gradient(to right, #2FA788, #43FF79);
+                }
+            }
+        }
+    }
+    
+
+    .second-side {
+        width: 50%;
+        @include flex-column();
+        @include center();
+        background: url(../images/bg.jpg) center no-repeat;
+        background-size: cover;
+
+        .form-side {
+            width: 70%;
+            height: 90%;
+            @include flex-column();
+            @include center();
+            justify-content: space-evenly;
+            background:rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid #1120234d;
+            border-radius: 40px;
+            
+            h2 {
+                 @include font(700, 40px, poppins);
+                 color: white;
+            }
+            .accounts {
+                width:300px;
+                @include flex-row();
+                @include center();
+                justify-content: space-around;
+
+
+                div {
+                    @include flex-row();
+                    @include center();
+                    background-color: rgba(255, 255, 255, 0.5);
+                    border-radius: 10px;
+                    width: 60px;
+                    height: 60px;
+                    cursor: pointer;
+
+                    img {
+                        width: 35px;
+                        height: 35px;
+                        margin: auto;
+                    }
+                }
+            }
+            .or-email {
+                @include font(300, 12px, poppins);
+                color: white;
+                position: relative;
+
+                &::before {
+                    content: " ";
+                    height: 1px;
+                    width: 100px;
+                    position:absolute;
+                    top: 50%;
+                    left: -110%;
+                    transform: translateY(-50%);
+                    background-color:#081113;
+                    border: 1px solid #081113;
+                    border-radius: 5px;
+                }
+                &::after {
+                    content: " ";
+                    height: 1px;
+                    width: 100px;
+                    position:absolute;
+                    top: 50%;
+                    right: -110%;
+                    transform: translateY(-50%);
+                    background-color:#081113;
+                    border: 1px solid #081113;
+                    border-radius: 5px;
+                }
+            }
+            form {
+                width: 100%;
+                @include flex-column();
+                @include center();
+                margin-top: -20px;
+
+                
+                &>input, &>label {
+                    width: 80%;
+                    height: 50px;
+                    color: #081113;
+
+                }
+                &>label {
+                    @include font(500, 18px, roboto);
+                    padding-top: 15px;
+                }
+                input {
+                    @include font(500, 13px, roboto);
+                    outline: none;
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 8px;
+                }
+
+                .form-check-pass {
+                    width: 80%;
+                    @include flex-row();
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                    padding: 5px 10px 10px;
+                    
+                    div {
+                        
+                        label {
+                            @include font(500, 14px, roboto);
+                            color: #081113;
+                         }
+                    }
+
+                    a {
+                        @include font(500, 12px, poppins);
+                        color: #43FF79;
+                        text-decoration: none;
+                        text-emphasis-position: right;
+                        &:hover {
+                            text-decoration: underline;
+
+                        }
+                    }
+                }
+                input[type="submit"] {
+                    background:rgba($color: #112023, $alpha: 0.7);
+                    @include font(400, 20px, roboto);
+                    color: white;
+                    cursor: pointer;
+                    transition:background 300ms linear;
+                    &:hover {
+                        background:rgba($color: #112023, $alpha: 0.9);
+                    }
+                }
+            }
+            .cpy {
+                @include font(300, 16px, poppins);
+                color: white;
+            }
+         }
+    }
+}
