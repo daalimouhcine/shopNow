@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <p class="or-email">or do it via E-mail</p>
-                    <form action="">
+                    <form action="index.php" method="POST">
                         <label for="email">E-mail</label>
                         <input type="email" id="email" name="email" placeholder="@gmail.com">
                         <label for="password">Password</label>

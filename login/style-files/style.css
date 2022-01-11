@@ -38,9 +38,22 @@ main .info-side {
   background-color: #112023;
 }
 
+@media (max-width: 768px) {
+  main .info-side {
+    width: 40%;
+  }
+}
+
 main .info-side h1 {
   font: 700 40px poppins;
   color: white;
+}
+
+@media (max-width: 1024px) {
+  main .info-side h1 {
+    font: 700 35px poppins;
+    margin-top: 20px;
+  }
 }
 
 main .info-side .elem1 {
@@ -66,10 +79,51 @@ main .info-side .elem1 p {
   text-align: center;
 }
 
+@media (max-width: 1024px) {
+  main .info-side .elem1 p {
+    width: 400px;
+    font: 300 15px poppins;
+  }
+}
+
+@media (max-width: 900px) {
+  main .info-side .elem1 p {
+    width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .info-side .elem1 p {
+    width: 300px;
+  }
+}
+
 main .info-side .elem1 img {
   width: 400px;
   height: 330px;
   margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+  main .info-side .elem1 img {
+    width: 350px;
+    height: 300px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  main .info-side .elem1 img {
+    width: 300px;
+    height: 270px;
+  }
+}
+
+@media (max-width: 768px) {
+  main .info-side .elem1 img {
+    width: 250px;
+    height: 220px;
+  }
 }
 
 main .info-side .keys {
@@ -132,6 +186,12 @@ main .second-side {
   background-size: cover;
 }
 
+@media (max-width: 768px) {
+  main .second-side {
+    width: 60%;
+  }
+}
+
 main .second-side .form-side {
   width: 70%;
   height: 90%;
@@ -159,7 +219,7 @@ main .second-side .form-side {
 }
 
 main .second-side .form-side h2 {
-  font: 700 40px poppins;
+  font: 700 35px poppins;
   color: white;
 }
 
@@ -218,28 +278,28 @@ main .second-side .form-side .or-email {
 main .second-side .form-side .or-email::before {
   content: " ";
   height: 1px;
-  width: 100px;
+  width: 110px;
   position: absolute;
   top: 50%;
-  left: -110%;
+  left: -120%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background-color: #081113;
-  border: 1px solid #081113;
+  background-color: #3e4f53;
+  border: 1px solid #3e4f53;
   border-radius: 5px;
 }
 
 main .second-side .form-side .or-email::after {
   content: " ";
   height: 1px;
-  width: 100px;
+  width: 110px;
   position: absolute;
   top: 50%;
-  right: -110%;
+  right: -120%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background-color: #081113;
-  border: 1px solid #081113;
+  background-color: #3e4f53;
+  border: 1px solid #3e4f53;
   border-radius: 5px;
 }
 
@@ -273,7 +333,7 @@ main .second-side .form-side form > label {
 }
 
 main .second-side .form-side form input {
-  font: 500 13px roboto;
+  font: 500 14px roboto;
   outline: none;
   margin-bottom: 10px;
   padding: 10px;
@@ -330,5 +390,29 @@ main .second-side .form-side form input[type="submit"]:hover {
 main .second-side .form-side .cpy {
   font: 300 16px poppins;
   color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .info-side {
+    width: 50%;
+  }
+  .info-side h1 {
+    font: 700 20px poppins;
+  }
+  .info-side .elem1 p {
+    width: 400px;
+    font: 300 15px poppins;
+  }
+  .info-side .elem1 img {
+    width: 300px;
+    height: 290px;
+    margin-top: 20px;
+  }
+  .info-side .keys i {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    margin: 0 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

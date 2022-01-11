@@ -1,18 +1,6 @@
-@mixin flex-row {
-    display: flex;
-    flex-direction: row;
-}
-@mixin flex-column {
-    display: flex;
-    flex-direction: column;
-}
-@mixin center {
-    align-items: center;
-    justify-content: center;
-}
-@mixin font($weight, $size, $family) {
-    font: $weight $size $family;
-}
+@import "normal-mixins.scss";
+@import "media-queries.scss";
+
 
 * {
     margin:0;
@@ -32,10 +20,19 @@ main {
         @include center();
         justify-content: space-around;
         background-color: #112023;
+        //media queries for responsive design.
+        @include sm {
+            width: 40%;
+        }
 
         h1 {
             @include font(700, 40px, poppins);
             color: white;
+            //media queries for responsive design.
+            @include md {
+                @include font(700, 35px, poppins);
+                margin-top: 20px;
+            }
         }
         .elem1 {
             @include flex-column();
@@ -45,11 +42,37 @@ main {
                 @include font(300, 16px, poppins);
                 color: white;
                 text-align: center;
+                //media queries for responsive design.
+                @include md {
+                    width: 400px;
+                    @include font(300, 15px, poppins);
+                }
+                @include breakpoint(900px) {
+                    width: 350px;
+                }
+                @include sm {
+                    width: 300px;
+                }
             }
             img {
                 width: 400px;
                 height: 330px;
                 margin-top: 20px;
+                //media queries for responsive design.
+                @include md {
+                    width: 350px;
+                    height:300px;
+                    margin-top: 30px;
+                }
+                @include breakpoint(900px) {
+                    width: 300px;
+                    height:270px;
+                }
+                @include sm {
+                    width: 250px;
+                    height: 220px;
+                }
+
             }
         }
 
@@ -83,6 +106,10 @@ main {
         @include center();
         background: url(../images/bg.jpg) center no-repeat;
         background-size: cover;
+        //media queries for responsive design.
+        @include sm {
+            width: 60%;
+        }
 
         .form-side {
             width: 70%;
@@ -96,7 +123,7 @@ main {
             border-radius: 40px;
             
             h2 {
-                 @include font(700, 40px, poppins);
+                 @include font(700, 35px, poppins);
                  color: white;
             }
             .accounts {
@@ -130,25 +157,25 @@ main {
                 &::before {
                     content: " ";
                     height: 1px;
-                    width: 100px;
+                    width: 110px;
                     position:absolute;
                     top: 50%;
-                    left: -110%;
+                    left: -120%;
                     transform: translateY(-50%);
-                    background-color:#081113;
-                    border: 1px solid #081113;
+                    background-color:#3e4f53;
+                    border: 1px solid #3e4f53;
                     border-radius: 5px;
                 }
                 &::after {
                     content: " ";
                     height: 1px;
-                    width: 100px;
+                    width: 110px;
                     position:absolute;
                     top: 50%;
-                    right: -110%;
+                    right: -120%;
                     transform: translateY(-50%);
-                    background-color:#081113;
-                    border: 1px solid #081113;
+                    background-color:#3e4f53;
+                    border: 1px solid #3e4f53;
                     border-radius: 5px;
                 }
             }
@@ -170,7 +197,7 @@ main {
                     padding-top: 15px;
                 }
                 input {
-                    @include font(500, 13px, roboto);
+                    @include font(500, 14px, roboto);
                     outline: none;
                     margin-bottom: 10px;
                     padding: 10px;
@@ -220,5 +247,36 @@ main {
                 color: white;
             }
          }
+    }
+}
+
+
+@media screen and (max-width:1000px) {
+    .info-side {
+        width: 50%;
+
+        h1 {
+            @include font(700, 20px, poppins);
+        }
+        .elem1 {
+            p {
+                width: 400px;
+                @include font(300, 15px, poppins);
+            }
+            img {
+                width: 300px;
+                height: 290px;
+                margin-top: 20px;
+            }
+        }
+
+        .keys {
+            i {
+                width: 50px;
+                height: 50px;
+                font-size: 22px;
+                margin: 0 20px;
+            }
+        }
     }
 }
