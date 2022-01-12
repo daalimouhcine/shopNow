@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #112023;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.my__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1a4c57;
+  position: fixed;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 26rem;
+  height: 100vh;
+  -webkit-transform: translateX(-85%);
+          transform: translateX(-85%);
+  list-style: none;
+  gap: 5rem;
+  padding-top: 3rem;
+  top: 0;
+  /* 38 px */
+  left: 0;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.my__nav.show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.LOGO {
+  font-size: 3rem;
+  color: white;
+}
+
+.link {
+  width: 100%;
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: whitesmoke;
+}
+
+.form__add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5rem;
+  padding: 3rem;
+  width: 60%;
+}
+
+.input {
+  padding: 1rem;
+  width: 60%;
+}
+
+.sect1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sect2 .group1 .s__group1, .sect2 .group1 .s__group2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.table__a, .table__n {
+  gap: 1rem;
+  padding: 1rem 5rem;
+  font-size: 1.7rem;
+  margin: 0 auto;
+}
+
+.sect2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 6%;
+  margin-top: 3rem;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.sect2 .group1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sect2 .group1 .s__group1 {
+  background-color: #112023;
+}
+
+.sect2 .group1 .s__group2 {
+  background-color: #1a4c57;
+  width: 112%;
+  border-radius: 5px;
+  margin: 3px;
+}
+
+.edit__delete {
+  margin-top: 5px;
+}
+
+.img_marg {
+  margin-left: 1rem;
+}
+
+.table__a {
+  color: rgba(255, 255, 255, 0.767);
+}
+
+.table__n {
+  color: white;
+}
+
+.btn__form1 {
+  border: none;
+  border-radius: 0.6rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background-color: #1a4c57;
+  color: white;
+  margin-top: 2rem;
+  -webkit-transition: background 330ms linear , -webkit-transform 330ms linear;
+  transition: background 330ms linear , -webkit-transform 330ms linear;
+  transition: transform 330ms linear , background 330ms linear;
+  transition: transform 330ms linear , background 330ms linear , -webkit-transform 330ms linear;
+}
+
+.btn__form1:hover {
+  background-color: white;
+  color: black;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.hmb__menu {
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 26rem;
+}
+
+.hmb__menu:focus {
+  outline: none;
+}
+
+.Dashboard {
+  color: white;
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+
+.copyright {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  margin-top: 25rem;
+}
+
+.icons {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 26rem;
+}
+/*# sourceMappingURL=style.css.map */
