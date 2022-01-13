@@ -296,37 +296,80 @@ main {
                 @include center();
                 margin-top: -20px;
 
-                
-                &>input, &>label {
+                .input-container{
+                    position: relative;
                     width: 80%;
                     height: 50px;
-                    color: #081113;
+                    margin-bottom: 40px;
                     //media queries for responsive design.
                     @include breakpoint(930px) {
                         width: 90%;
                     }
-                    @include xs {
-                        height: 40px;
-                    }
+                    
 
-                }
-                &>label {
-                    @include font(500, 18px, roboto);
-                    padding-top: 15px;
-                }
-                input {
-                    @include font(500, 14px, roboto);
-                    outline: none;
-                    margin-bottom: 10px;
-                    padding: 10px;
-                    border: none;
-                    border-radius: 8px;
-                    //media queries for responsive design.
-                    @include xs {
-                        @include font(500, 12px, roboto);
+                    input, label {
+                        width: 100%;
+                        color: #081113;
                     }
+                    label {
+                        @include font(500, 18px, roboto);
+                        padding-top: 15px;
+                        //media queries for responsive design.
+                        @include sm {
+                            @include font(500, 16px, roboto);
+                        }
+                    }
+                    input {
+                        @include font(500, 14px, roboto);
+                        outline: none;
+                        padding: 15px 10px;
+                        border:3px solid transparent;
+                        border-radius: 8px;
+                        transition: border 300ms linear;
+                        //media queries for responsive design.
+                        @include xs {
+                            border:2px solid transparent;
+                            @include font(500, 12px, roboto);
+                        }
+                    }
+                    &.success input{
+                        border-color: #2ecc71;
+                    }
+                    &.error input{
+                        border-color: #e74c3c;
+                    }
+                    i {
+                        position: absolute;
+                        top: 80%;
+                        right: 10px;
+                        visibility:hidden;
+                        pointer-events: none;
+                        //media queries for responsive design.
+                        @include xs {
+                            font-size: 12px;
+                            top: 75%;
+                        }
+                    }
+                    &.success i.fa-check-circle{
+                        color:#2ecc71;
+                        visibility:visible;
+                    }
+                    &.error i.fa-exclamation-circle{
+                        color:#e74c3c;
+                        visibility: visible;
+                    }
+                    p {
+                        @include font(400, 12px, roboto);
+                        color: #e74c3c;
+                        visibility: hidden;
+                    } 
+                    &.error p {
+                        visibility: visible;
+                    }
+                    
                 }
 
+                
                 .form-check-pass {
                     width: 80%;
                     @include flex-row();
@@ -356,10 +399,10 @@ main {
                             @include xs {
                                 @include font(500, 12px, roboto);
                             }
-
-                         }
+                            
+                        }
                     }
-
+                    
                     a {
                         @include font(500, 12px, poppins);
                         color: #43FF79;
@@ -376,15 +419,26 @@ main {
                     }
                 }
                 input[type="submit"] {
+                    width: 80%;
                     background:rgba($color: #112023, $alpha: 0.7);
                     @include font(400, 20px, roboto);
+                    outline: none;
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 8px;
                     color: white;
                     cursor: pointer;
                     transition:background 300ms linear;
                     &:hover {
                         background:rgba($color: #112023, $alpha: 0.9);
                     }
+                    //media queries for responsive design.
+                    @include xs {
+                        @include font(500, 12px, roboto);
+                    }
                 }
+
             }
             .cpy {
                 @include font(300, 16px, poppins);

@@ -502,42 +502,93 @@ main .second-side .form-side form {
   margin-top: -20px;
 }
 
-main .second-side .form-side form > input, main .second-side .form-side form > label {
+main .second-side .form-side form .input-container {
+  position: relative;
   width: 80%;
   height: 50px;
-  color: #081113;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 930px) {
-  main .second-side .form-side form > input, main .second-side .form-side form > label {
+  main .second-side .form-side form .input-container {
     width: 90%;
   }
 }
 
-@media (max-width: 480px) {
-  main .second-side .form-side form > input, main .second-side .form-side form > label {
-    height: 40px;
-  }
+main .second-side .form-side form .input-container input, main .second-side .form-side form .input-container label {
+  width: 100%;
+  color: #081113;
 }
 
-main .second-side .form-side form > label {
+main .second-side .form-side form .input-container label {
   font: 500 18px roboto;
   padding-top: 15px;
 }
 
-main .second-side .form-side form input {
+@media (max-width: 768px) {
+  main .second-side .form-side form .input-container label {
+    font: 500 16px roboto;
+  }
+}
+
+main .second-side .form-side form .input-container input {
   font: 500 14px roboto;
   outline: none;
-  margin-bottom: 10px;
-  padding: 10px;
-  border: none;
+  padding: 15px 10px;
+  border: 3px solid transparent;
   border-radius: 8px;
+  -webkit-transition: border 300ms linear;
+  transition: border 300ms linear;
 }
 
 @media (max-width: 480px) {
-  main .second-side .form-side form input {
+  main .second-side .form-side form .input-container input {
+    border: 2px solid transparent;
     font: 500 12px roboto;
   }
+}
+
+main .second-side .form-side form .input-container.success input {
+  border-color: #2ecc71;
+}
+
+main .second-side .form-side form .input-container.error input {
+  border-color: #e74c3c;
+}
+
+main .second-side .form-side form .input-container i {
+  position: absolute;
+  top: 80%;
+  right: 10px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  main .second-side .form-side form .input-container i {
+    font-size: 12px;
+    top: 75%;
+  }
+}
+
+main .second-side .form-side form .input-container.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+main .second-side .form-side form .input-container.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+main .second-side .form-side form .input-container p {
+  font: 400 12px roboto;
+  color: #e74c3c;
+  visibility: hidden;
+}
+
+main .second-side .form-side form .input-container.error p {
+  visibility: visible;
 }
 
 main .second-side .form-side form .form-check-pass {
@@ -619,8 +670,14 @@ main .second-side .form-side form .form-check-pass a:hover {
 }
 
 main .second-side .form-side form input[type="submit"] {
+  width: 80%;
   background: rgba(17, 32, 35, 0.7);
   font: 400 20px roboto;
+  outline: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
   color: white;
   cursor: pointer;
   -webkit-transition: background 300ms linear;
@@ -629,6 +686,12 @@ main .second-side .form-side form input[type="submit"] {
 
 main .second-side .form-side form input[type="submit"]:hover {
   background: rgba(17, 32, 35, 0.9);
+}
+
+@media (max-width: 480px) {
+  main .second-side .form-side form input[type="submit"] {
+    font: 500 12px roboto;
+  }
 }
 
 main .second-side .form-side .cpy {

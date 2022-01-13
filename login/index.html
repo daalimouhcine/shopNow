@@ -30,8 +30,8 @@
                     <img src="images/stor-stock.png" alt="stor image">
                 </div>
                 <div class="keys">
-                    <i class="fas fa-arrow-left"></i>
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-arrow-left" title="left arrow"></i>
+                    <i class="fas fa-arrow-right" title="right arrow"></i>
                 </div>
             </div>
             <div class="second-side">
@@ -49,11 +49,21 @@
                         </div>
                     </div>
                     <p class="or-email">or do it via E-mail</p>
-                    <form action="index.php" method="POST">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="@gmail.com">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Password">
+                    <form id="form" action="index.php" method="POST">
+                        <div class="input-container">
+                            <label for="email">E-mail</label>
+                            <input type="text" id="email" name="email" placeholder="@gmail.com" >
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <p>error message</p>
+                        </div>
+                        <div class="input-container">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Password" >
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <p>error message</p>
+                        </div>
                         <div class="form-check-pass">
                             <div>
                                 <input type="checkbox" id="checkbox" name="checkbox">
@@ -67,5 +77,6 @@
                 </div>
             </div>
         </main> 
+        <script src="validation.js"></script>
     </body>
 </html>
