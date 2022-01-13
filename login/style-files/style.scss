@@ -360,11 +360,14 @@ main {
                     }
                     p {
                         @include font(400, 12px, roboto);
-                        color: #e74c3c;
                         visibility: hidden;
                     } 
+                    &.success p {
+                        color:#2ecc71;
+                    }
                     &.error p {
                         visibility: visible;
+                        color: #e74c3c;
                     }
                     
                 }

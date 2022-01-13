@@ -5,13 +5,16 @@ const form = document.querySelector("#form"),
 
 form.addEventListener("submit", e => {
     e.preventDefault();
-    
+
     verifyInput();
+
 });
 
 const verifyInput = () => {
     const emailValue = email.value.trim(),
             passwordValue = password.value.trim();
+    let emailValid = false,
+        passwordValid = false;
 
     if (emailValue === "") {
         errorMessage(email, "Email cannot be blank");
@@ -19,12 +22,18 @@ const verifyInput = () => {
         errorMessage(email, "Not a valid email");
     } else {
         successMessage(email);
+        emailValid = true;
     }
 
     if (passwordValue === "") {
         errorMessage(password, "Password cannot be blank");
     } else {
         successMessage(password);
+        passwordValid = true;
+    }
+
+    if (emailValid && passwordValid) {
+        window.location = "../dashboard/";
     }
 
 }

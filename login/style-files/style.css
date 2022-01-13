@@ -583,12 +583,16 @@ main .second-side .form-side form .input-container.error i.fa-exclamation-circle
 
 main .second-side .form-side form .input-container p {
   font: 400 12px roboto;
-  color: #e74c3c;
   visibility: hidden;
+}
+
+main .second-side .form-side form .input-container.success p {
+  color: #2ecc71;
 }
 
 main .second-side .form-side form .input-container.error p {
   visibility: visible;
+  color: #e74c3c;
 }
 
 main .second-side .form-side form .form-check-pass {
