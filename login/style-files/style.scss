@@ -56,7 +56,7 @@ main {
                 @include flex-row();
                 transition: transform 700ms linear;
 
-                .elem1 {
+                .elem {
                     flex-basis: 100%;
                     @include flex-column();
                     @include center();
