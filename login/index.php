@@ -5,6 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LogIn</title>
+
+        <meta property="og:site_name" content="ShopNow">
+        <meta property="og:title" content="Stock and product management | Login page | ShopNow">
+        <meta property="og:description" content="A website for for login to the dashboard of the stock management">
+        <meta property="og:type" content="login webpage">
+        <meta property="og:image" content="images/logo.png">
+        <meta property="og:url" content="https://shop-now-brief.netlify.app/login">
+
+        <link rel="shortcut icon" href="images/logo.png">
+
         <link rel="stylesheet" href="style-files/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,13 +39,13 @@
                     <h2>Log In</h2>
                     <div class="accounts">
                         <div>
-                            <img src="images/google.png" alt="">
+                            <img src="images/google.png" alt="google icon">
                         </div>
                         <div>
-                            <img src="images/facebook.png" alt="">
+                            <img src="images/facebook.png" alt="facebook icon">
                         </div>
                         <div>
-                            <img src="images/apple.png" alt="">
+                            <img src="images/apple.png" alt="apple icon">
                         </div>
                     </div>
                     <p class="or-email">or do it via E-mail</p>
