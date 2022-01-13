@@ -17,6 +17,18 @@ main {
           flex-direction: row;
 }
 
+@media (max-width: 670px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 main .info-side {
   width: 50%;
   height: 100vh;
@@ -41,6 +53,12 @@ main .info-side {
 @media (max-width: 768px) {
   main .info-side {
     width: 40%;
+  }
+}
+
+@media (max-width: 670px) {
+  main .info-side {
+    width: 100%;
   }
 }
 
@@ -94,7 +112,7 @@ main .info-side .elem1 p {
 
 @media (max-width: 768px) {
   main .info-side .elem1 p {
-    width: 300px;
+    width: 90%;
   }
 }
 
@@ -121,8 +139,15 @@ main .info-side .elem1 img {
 
 @media (max-width: 768px) {
   main .info-side .elem1 img {
-    width: 250px;
-    height: 220px;
+    width: 90%;
+    height: 80%;
+  }
+}
+
+@media (max-width: 670px) {
+  main .info-side .elem1 img {
+    width: 70%;
+    margin-top: 40px;
   }
 }
 
@@ -162,6 +187,15 @@ main .info-side .keys i {
   transition: background 500ms linear;
 }
 
+@media (max-width: 768px) {
+  main .info-side .keys i {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin: 0 10px;
+  }
+}
+
 main .info-side .keys i:hover {
   background: -webkit-gradient(linear, left top, right top, from(#2FA788), to(#43FF79));
   background: linear-gradient(to right, #2FA788, #43FF79);
@@ -169,6 +203,7 @@ main .info-side .keys i:hover {
 
 main .second-side {
   width: 50%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,6 +224,12 @@ main .second-side {
 @media (max-width: 768px) {
   main .second-side {
     width: 60%;
+  }
+}
+
+@media (max-width: 670px) {
+  main .second-side {
+    width: 100%;
   }
 }
 
@@ -218,9 +259,27 @@ main .second-side .form-side {
   border-radius: 40px;
 }
 
+@media (max-width: 480px) {
+  main .second-side .form-side {
+    width: 85%;
+  }
+}
+
 main .second-side .form-side h2 {
   font: 700 35px poppins;
   color: white;
+}
+
+@media (max-width: 1024px) {
+  main .second-side .form-side h2 {
+    font: 700 30px poppins;
+  }
+}
+
+@media (max-width: 480px) {
+  main .second-side .form-side h2 {
+    font: 500 25px poppins;
+  }
 }
 
 main .second-side .form-side .accounts {
@@ -240,6 +299,18 @@ main .second-side .form-side .accounts {
           justify-content: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media (max-width: 1024px) {
+  main .second-side .form-side .accounts {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  main .second-side .form-side .accounts {
+    width: 200px;
+  }
 }
 
 main .second-side .form-side .accounts div {
@@ -263,16 +334,56 @@ main .second-side .form-side .accounts div {
   cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  main .second-side .form-side .accounts div {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  main .second-side .form-side .accounts div {
+    width: 45px;
+    height: 45px;
+  }
+}
+
 main .second-side .form-side .accounts div img {
   width: 35px;
   height: 35px;
   margin: auto;
 }
 
+@media (max-width: 1024px) {
+  main .second-side .form-side .accounts div img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  main .second-side .form-side .accounts div img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
 main .second-side .form-side .or-email {
   font: 300 12px poppins;
   color: white;
   position: relative;
+}
+
+@media (max-width: 1024px) {
+  main .second-side .form-side .or-email {
+    font: 300 11px poppins;
+  }
+}
+
+@media (max-width: 480px) {
+  main .second-side .form-side .or-email {
+    font: 300 10px poppins;
+  }
 }
 
 main .second-side .form-side .or-email::before {
@@ -289,6 +400,41 @@ main .second-side .form-side .or-email::before {
   border-radius: 5px;
 }
 
+@media (max-width: 1200px) {
+  main .second-side .form-side .or-email::before {
+    width: 100px;
+    left: -110%;
+  }
+}
+
+@media (max-width: 1024px) {
+  main .second-side .form-side .or-email::before {
+    width: 80px;
+    left: -100%;
+  }
+}
+
+@media (max-width: 930px) {
+  main .second-side .form-side .or-email::before {
+    width: 60px;
+    left: -70%;
+  }
+}
+
+@media (max-width: 670px) {
+  main .second-side .form-side .or-email::before {
+    width: 90px;
+    left: -100%;
+  }
+}
+
+@media (max-width: 480px) {
+  main .second-side .form-side .or-email::before {
+    width: 20vw;
+    left: -22vw;
+  }
+}
+
 main .second-side .form-side .or-email::after {
   content: " ";
   height: 1px;
@@ -301,6 +447,41 @@ main .second-side .form-side .or-email::after {
   background-color: #3e4f53;
   border: 1px solid #3e4f53;
   border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+  main .second-side .form-side .or-email::after {
+    width: 100px;
+    right: -110%;
+  }
+}
+
+@media (max-width: 1024px) {
+  main .second-side .form-side .or-email::after {
+    width: 80px;
+    right: -100%;
+  }
+}
+
+@media (max-width: 930px) {
+  main .second-side .form-side .or-email::after {
+    width: 60px;
+    right: -70%;
+  }
+}
+
+@media (max-width: 670px) {
+  main .second-side .form-side .or-email::after {
+    width: 90px;
+    right: -100%;
+  }
+}
+
+@media (max-width: 480px) {
+  main .second-side .form-side .or-email::after {
+    width: 20vw;
+    right: -22vw;
+  }
 }
 
 main .second-side .form-side form {
@@ -321,24 +502,97 @@ main .second-side .form-side form {
   margin-top: -20px;
 }
 
-main .second-side .form-side form > input, main .second-side .form-side form > label {
+main .second-side .form-side form .input-container {
+  position: relative;
   width: 80%;
   height: 50px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 930px) {
+  main .second-side .form-side form .input-container {
+    width: 90%;
+  }
+}
+
+main .second-side .form-side form .input-container input, main .second-side .form-side form .input-container label {
+  width: 100%;
   color: #081113;
 }
 
-main .second-side .form-side form > label {
+main .second-side .form-side form .input-container label {
   font: 500 18px roboto;
   padding-top: 15px;
 }
 
-main .second-side .form-side form input {
+@media (max-width: 768px) {
+  main .second-side .form-side form .input-container label {
+    font: 500 16px roboto;
+  }
+}
+
+main .second-side .form-side form .input-container input {
   font: 500 14px roboto;
   outline: none;
-  margin-bottom: 10px;
-  padding: 10px;
-  border: none;
+  padding: 15px 10px;
+  border: 3px solid transparent;
   border-radius: 8px;
+  -webkit-transition: border 300ms linear;
+  transition: border 300ms linear;
+}
+
+@media (max-width: 480px) {
+  main .second-side .form-side form .input-container input {
+    border: 2px solid transparent;
+    font: 500 12px roboto;
+  }
+}
+
+main .second-side .form-side form .input-container.success input {
+  border-color: #2ecc71;
+}
+
+main .second-side .form-side form .input-container.error input {
+  border-color: #e74c3c;
+}
+
+main .second-side .form-side form .input-container i {
+  position: absolute;
+  top: 80%;
+  right: 10px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  main .second-side .form-side form .input-container i {
+    font-size: 12px;
+    top: 75%;
+  }
+}
+
+main .second-side .form-side form .input-container.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+main .second-side .form-side form .input-container.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+main .second-side .form-side form .input-container p {
+  font: 400 12px roboto;
+  visibility: hidden;
+}
+
+main .second-side .form-side form .input-container.success p {
+  color: #2ecc71;
+}
+
+main .second-side .form-side form .input-container.error p {
+  visibility: visible;
+  color: #e74c3c;
 }
 
 main .second-side .form-side form .form-check-pass {
@@ -357,9 +611,48 @@ main .second-side .form-side form .form-check-pass {
   padding: 5px 10px 10px;
 }
 
+@media (max-width: 930px) {
+  main .second-side .form-side form .form-check-pass {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  main .second-side .form-side form .form-check-pass {
+    height: 35px;
+  }
+}
+
+main .second-side .form-side form .form-check-pass div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .second-side .form-side form .form-check-pass div input {
+  margin: 0;
+}
+
 main .second-side .form-side form .form-check-pass div label {
   font: 500 14px roboto;
   color: #081113;
+  margin: 2px;
+}
+
+@media (max-width: 480px) {
+  main .second-side .form-side form .form-check-pass div label {
+    font: 500 12px roboto;
+  }
 }
 
 main .second-side .form-side form .form-check-pass a {
@@ -370,13 +663,25 @@ main .second-side .form-side form .form-check-pass a {
           text-emphasis-position: right;
 }
 
+@media (max-width: 480px) {
+  main .second-side .form-side form .form-check-pass a {
+    font: 500 11px roboto;
+  }
+}
+
 main .second-side .form-side form .form-check-pass a:hover {
   text-decoration: underline;
 }
 
 main .second-side .form-side form input[type="submit"] {
+  width: 80%;
   background: rgba(17, 32, 35, 0.7);
   font: 400 20px roboto;
+  outline: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
   color: white;
   cursor: pointer;
   -webkit-transition: background 300ms linear;
@@ -387,32 +692,26 @@ main .second-side .form-side form input[type="submit"]:hover {
   background: rgba(17, 32, 35, 0.9);
 }
 
+@media (max-width: 480px) {
+  main .second-side .form-side form input[type="submit"] {
+    font: 500 12px roboto;
+  }
+}
+
 main .second-side .form-side .cpy {
   font: 300 16px poppins;
   color: white;
 }
 
-@media screen and (max-width: 1000px) {
-  .info-side {
-    width: 50%;
+@media (max-width: 768px) {
+  main .second-side .form-side .cpy {
+    font: 500 14px poppins;
   }
-  .info-side h1 {
-    font: 700 20px poppins;
-  }
-  .info-side .elem1 p {
-    width: 400px;
-    font: 300 15px poppins;
-  }
-  .info-side .elem1 img {
-    width: 300px;
-    height: 290px;
-    margin-top: 20px;
-  }
-  .info-side .keys i {
-    width: 50px;
-    height: 50px;
-    font-size: 22px;
-    margin: 0 20px;
+}
+
+@media (max-width: 480px) {
+  main .second-side .form-side .cpy {
+    font: 500 12px poppins;
   }
 }
 /*# sourceMappingURL=style.css.map */

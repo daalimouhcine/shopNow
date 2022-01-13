@@ -5,6 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LogIn</title>
+
+        <meta property="og:site_name" content="ShopNow">
+        <meta property="og:title" content="Stock and product management | Login page | ShopNow">
+        <meta property="og:description" content="A website for for login to the dashboard of the stock management">
+        <meta property="og:type" content="login webpage">
+        <meta property="og:image" content="images/logo.png">
+        <meta property="og:url" content="https://shop-now-brief.netlify.app/login">
+
+        <link rel="shortcut icon" href="images/logo.png">
+
         <link rel="stylesheet" href="style-files/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +30,8 @@
                     <img src="images/stor-stock.png" alt="stor image">
                 </div>
                 <div class="keys">
-                    <i class="fas fa-arrow-left"></i>
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-arrow-left" title="left arrow"></i>
+                    <i class="fas fa-arrow-right" title="right arrow"></i>
                 </div>
             </div>
             <div class="second-side">
@@ -29,21 +39,31 @@
                     <h2>Log In</h2>
                     <div class="accounts">
                         <div>
-                            <img src="images/google.png" alt="">
+                            <img src="images/google.png" alt="google icon">
                         </div>
                         <div>
-                            <img src="images/facebook.png" alt="">
+                            <img src="images/facebook.png" alt="facebook icon">
                         </div>
                         <div>
-                            <img src="images/apple.png" alt="">
+                            <img src="images/apple.png" alt="apple icon">
                         </div>
                     </div>
                     <p class="or-email">or do it via E-mail</p>
-                    <form action="index.php" method="POST">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="@gmail.com">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Password">
+                    <form id="form" action="index.php" method="POST">
+                        <div class="input-container">
+                            <label for="email">E-mail</label>
+                            <input type="text" id="email" name="email" placeholder="@gmail.com" >
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <p>error message</p>
+                        </div>
+                        <div class="input-container">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Password" >
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <p>error message</p>
+                        </div>
                         <div class="form-check-pass">
                             <div>
                                 <input type="checkbox" id="checkbox" name="checkbox">
@@ -57,5 +77,6 @@
                 </div>
             </div>
         </main> 
+        <script src="validation.js"></script>
     </body>
 </html>
