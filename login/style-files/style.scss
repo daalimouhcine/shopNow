@@ -40,52 +40,83 @@ main {
                 @include font(700, 35px, poppins);
                 margin-top: 20px;
             }
-        }
-        .elem1 {
-            @include flex-column();
-            @include center();
-            p {
-                width: 500px;
-                @include font(300, 16px, poppins);
-                color: white;
-                text-align: center;
-                //media queries for responsive design.
-                @include md {
-                    width: 400px;
-                    @include font(300, 15px, poppins);
-                }
-                @include breakpoint(900px) {
-                    width: 350px;
-                }
-                @include sm {
-                    width:90%;
-                }
+            @include sm {
+                @include font(700, 30px, poppins);
             }
-            img {
-                width: 400px;
-                height: 330px;
-                margin-top: 20px;
-                //media queries for responsive design.
-                @include md {
-                    width: 350px;
-                    height:300px;
-                    margin-top: 30px;
-                }
-                @include breakpoint(900px) {
-                    width: 300px;
-                    height:270px;
-                }
-                @include sm {
-                    width: 90%;
-                    height: 80%;
-                }
-                @include breakpoint(670px) {
-                    width: 70%;
-                    margin-top: 40px;
-                }
+            @include xs {
+                @include font(700, 25px, poppins);
+            }
+        }
+        .slider-container {
+            width: 90%;
+            overflow: hidden;
 
+            .slid-mov {         
+                width: 400%;
+                @include flex-row();
+                transition: transform 700ms linear;
+
+                .elem1 {
+                    flex-basis: 100%;
+                    @include flex-column();
+                    @include center();
+                    margin: 0 15px;
+                    p {
+                        width: 500px;
+                        @include font(300, 16px, poppins);
+                        color: white;
+                        text-align: center;
+                        &::first-letter {
+                            @include font(500, 25px, poppins);
+                            //media queries for responsive design.
+                            @include md {
+                                @include font(500, 23px, poppins);
+                            }
+                            @include sm {
+                                @include font(500, 20px, poppins);
+                            }
+                            @include xs {
+                                @include font(500, 16px, poppins);
+                            }
+                        }
+                        //media queries for responsive design.
+                        @include md {
+                            width: 400px;
+                            @include font(300, 15px, poppins);
+                        }
+                        @include breakpoint(900px) {
+                            width: 90%;
+                        }
+                        @include sm {
+                            @include font(300, 14px, poppins);
+                        }
+                        @include xs {
+                            @include font(300, 12px, poppins);
+                        }
+                    }
+                    img {
+                        width: 400px;
+                        margin-top: 20px;
+                        //media queries for responsive design.
+                        @include md {
+                            width: 350px;
+                            margin-top: 30px;
+                        }
+                        @include breakpoint(900px) {
+                            width: 300px;
+                        }
+                        @include sm {
+                            width: 90%;
+                        }
+                        @include breakpoint(670px) {
+                            margin-top: 40px;
+                        }
+        
+                    }
+                }
             }
         }
+            
 
         .keys {
             @include flex-row();
