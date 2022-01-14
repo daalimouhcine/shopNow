@@ -11,49 +11,123 @@ html {
 }
 
 body {
-  overflow-x: hidden;
-  background-color: #112023;
-}
-
-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  background-color: #112023;
 }
 
-.my__nav {
+aside {
+  width: 20%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1a4c57;
+  -webkit-transition: width 200ms linear;
+  transition: width 200ms linear;
+}
+
+.title-con {
+  width: 100%;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #1a4c57;
-  position: fixed;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 26rem;
-  height: 100vh;
-  -webkit-transform: translateX(-85%);
-          transform: translateX(-85%);
-  list-style: none;
-  gap: 5rem;
-  padding-top: 3rem;
-  top: 0;
-  /* 38 px */
-  left: 0;
-  -webkit-transition: 200ms;
-  transition: 200ms;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 10px;
 }
 
-.my__nav.show {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+.title-con .Dashboard {
+  width: 90%;
+  color: white;
+  font-size: 3rem;
+  margin: 30px 0 30px;
+}
+
+.title-con .hmb__menu {
+  width: 10%;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.title-con .hmb__menu:focus {
+  outline: none;
+}
+
+.my__nav {
+  width: 80%;
+  list-style: none;
+}
+
+.my__nav li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 10px 10px 0;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-transition: background 300ms linear;
+  transition: background 300ms linear;
+}
+
+.my__nav li:hover {
+  background-color: #112023b7;
+}
+
+.my__nav li .icons {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 20px;
+}
+
+.my__nav li a {
+  padding: 0 5px;
+  margin-left: 10px;
+}
+
+.hide {
+  width: 5%;
+}
+
+.hide h1 {
+  display: none;
+}
+
+.hide .my__nav li .icons {
+  margin-left: 10px;
+}
+
+.hide .my__nav li a {
+  display: none;
+}
+
+.hide .end-container div .logout-icons {
+  margin-left: 85px;
+}
+
+.hide .end-container div .logout-link {
+  visibility: hidden;
+}
+
+.hide .end-container .copyright {
+  visibility: hidden;
 }
 
 .menu__logo {
@@ -78,6 +152,65 @@ header {
 
 .link:hover {
   color: whitesmoke;
+}
+
+.end-container {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.end-container div {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+  padding: 10px 0;
+  -webkit-transition: background 300ms linear;
+  transition: background 300ms linear;
+  border-radius: 10px;
+}
+
+.end-container div:hover {
+  background-color: #112023b7;
+}
+
+.end-container div .logout-icons {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 0px;
+}
+
+.end-container div .logout-link {
+  padding: 0 5px;
+  padding: 0 10px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.end-container .copyright {
+  height: 50px;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 0 10px;
+}
+
+main {
+  width: 80%;
 }
 
 .form__add {
@@ -196,37 +329,5 @@ header {
   color: black;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-}
-
-.hmb__menu {
-  background-color: transparent;
-  border: 0;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  margin-left: 26rem;
-}
-
-.hmb__menu:focus {
-  outline: none;
-}
-
-.Dashboard {
-  color: white;
-  font-size: 3rem;
-  margin-top: 1rem;
-}
-
-.copyright {
-  font-size: 1.5rem;
-  color: white;
-  text-align: center;
-  margin-top: 25rem;
-}
-
-.icons {
-  width: 3rem;
-  height: 3rem;
-  margin-left: 26rem;
 }
 /*# sourceMappingURL=style.css.map */
