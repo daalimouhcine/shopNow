@@ -134,7 +134,7 @@ main {
                 border-radius: 100px;
                 margin: 0 20px;
                 cursor: pointer;
-                transition:background 500ms linear;
+                transition:background 300ms linear;
                  //media queries for responsive design.
                 @include sm {
                     width: 40px;
@@ -144,7 +144,7 @@ main {
                 }
 
                 &:hover {
-                    background:linear-gradient(to right, #2FA788, #43FF79);
+                    background: #26e17f;
                 }
             }
         }

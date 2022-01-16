@@ -241,8 +241,8 @@ main .info-side .keys i {
   border-radius: 100px;
   margin: 0 20px;
   cursor: pointer;
-  -webkit-transition: background 500ms linear;
-  transition: background 500ms linear;
+  -webkit-transition: background 300ms linear;
+  transition: background 300ms linear;
 }
 
 @media (max-width: 768px) {
@@ -255,8 +255,7 @@ main .info-side .keys i {
 }
 
 main .info-side .keys i:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#2FA788), to(#43FF79));
-  background: linear-gradient(to right, #2FA788, #43FF79);
+  background: #26e17f;
 }
 
 main .second-side {
