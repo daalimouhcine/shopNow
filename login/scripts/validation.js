@@ -1,6 +1,6 @@
 const form = document.querySelector("#form"),
-        email = document.querySelector("#email"),
-        password = document.querySelector("#password");
+      email = document.querySelector("#email"),
+      password = document.querySelector("#password");
 
 
 form.addEventListener("submit", e => {
@@ -33,7 +33,7 @@ const verifyInput = () => {
     }
 
     if (emailValid && passwordValid) {
-        window.location = "../dashboard/";
+        window.location = "../dashboard/index.html";
     }
 
 }

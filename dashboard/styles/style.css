@@ -15,6 +15,29 @@ body {
   display: -ms-flexbox;
   display: flex;
   background-color: #112023;
+  overflow-x: hidden;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10rem;
+  width: 80%;
+}
+
+main .section1, main .section2, main .section3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12rem;
 }
 
 aside {
@@ -53,8 +76,7 @@ aside {
 .title-con .Dashboard {
   width: 90%;
   color: white;
-  font-size: 3rem;
-  margin: 30px 0 30px;
+  font-size: 3.5rem;
 }
 
 .title-con .hmb__menu {
@@ -209,10 +231,6 @@ aside {
   padding: 0 10px;
 }
 
-main {
-  width: 80%;
-}
-
 .form__add {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -224,14 +242,13 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 5rem;
   padding: 3rem;
   width: 60%;
 }
 
 .input {
-  padding: 1rem;
-  width: 60%;
+  padding: 1.2rem;
+  width: 75%;
 }
 
 .sect1 {
@@ -251,12 +268,15 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .table__a, .table__n {
   gap: 1rem;
   padding: 1rem 5rem;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin: 0 auto;
 }
 
@@ -268,7 +288,6 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 6%;
-  margin-top: 3rem;
   width: 60%;
   margin: 0 auto;
 }
@@ -351,31 +370,6 @@ main {
   border-radius: 4%;
 }
 
-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 6rem;
-  gap: 5rem;
-}
-
-main .section1, main .section2, main .section3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 12rem;
-}
-
 .card {
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -400,5 +394,100 @@ main .section1, main .section2, main .section3 {
 
 .containerr {
   padding: 2px 16px;
+}
+
+@media (max-width: 957px) {
+  .link, .Dashboard, #arrow {
+    display: none;
+  }
+  li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 875px) {
+  html {
+    font-size: 45%;
+    overflow-x: hidden;
+  }
+  .end-container, .title-con {
+    display: none;
+  }
+  .my__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  aside {
+    background-color: #112023;
+  }
+  .sect2 {
+    margin: 0 11rem;
+  }
+  .form__add {
+    width: 80%;
+  }
+}
+
+@media (max-width: 705px) {
+  html {
+    font-size: 35%;
+  }
+  .my__nav li .icons {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .btn__form1 {
+    padding: 2rem 3rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .sect2 {
+    margin: 0 5rem;
+  }
+  .input {
+    width: 130%;
+    margin-right: 15rem;
+  }
+}
+
+@media (max-width: 527px) {
+  .sect2 {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 491px) {
+  .table__n {
+    padding: 1rem 4rem;
+  }
+}
+
+@media (max-width: 445px) {
+  .table__n {
+    padding: 1rem 3rem;
+  }
+}
+
+@media (max-width: 415px) {
+  .sect2 .group1 .s__group2 {
+    width: 90%;
+    margin: 4px;
+    margin-left: 6rem;
+  }
+  .sect2 .group1 .s__group1 {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
