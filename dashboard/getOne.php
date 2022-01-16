@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/graphs.css">
-    
+    <link rel="stylesheet" href="styles/getOne.css">
 
     <link href="https://unpkg.com/pattern.css" rel="stylesheet">
     <link rel="shortcut icon" href="../login/images/logo.png">
@@ -17,7 +17,7 @@
 <body>
     <aside>
         <div class="title-con">
-            <h1 class="Dashboard">Dashboard</h1>
+            <h1 class="Dashboard">View product</h1>
     
             <button class="hmb__menu" id="hmb__menu">
                 <i class="fas fa-arrow-left" id="arrow" title="Hide and Show side bar"></i>
@@ -54,11 +54,20 @@
             <p class="copyright"> Copyright © 2022 ShopNow. All rights reserved. </p>
         </div>
     </aside>
+
+    <main>
+
+        <section class="section1">
+            <div class="card">
+                <img src="imgs/prodd.png" alt="Avatar">
+                <div class="containerr">
+                    <h4>Name Product</h4>
+                    <h4>Quantity : 12</h4>
+                </div>
+            </div>    
+
+    </main>
     
-    <?php
-         include "charts.php";
-         // include "modify.php";
-    ?>
 
     <script src="scripts/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

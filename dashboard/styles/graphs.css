@@ -13,6 +13,7 @@ main {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin: 0 auto;
 }
 
 main h1 {

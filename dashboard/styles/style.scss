@@ -43,7 +43,7 @@ aside {
         width: 90%;
         color: white;
         font-size: 3rem;
-        margin:30px 0 30px;
+        margin:3rem 0 3rem;
     }
     
     .hmb__menu{
@@ -186,13 +186,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5rem;
-    padding: 3rem;
-    width: 60%;
+    width: 75%;
 }
 
+
 .input{
-    padding: 1rem;
+    padding: 1.5rem;
     width: 60%;
 }
 
@@ -205,6 +204,7 @@ main {
 %flex_row{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 %table{
@@ -218,9 +218,9 @@ main {
     display: flex;
     justify-content: center;
     border-radius: 6%;
-    margin-top: 3rem;
     width: 60%;
     margin: 0 auto;
+    margin-top: 10rem;
     .group1{
         display: flex;
         flex-direction: column;
@@ -233,7 +233,7 @@ main {
             background-color: $main2color;
             width: 112%;
             border-radius: 5px;
-            margin: 3px;
+            margin: 4px;
         }
     }
 }
@@ -249,11 +249,13 @@ main {
 .table__a{
     @extend %table;
     color: rgba(255, 255, 255, 0.767);
+    width: 100%;
 }
 
 .table__n{
     @extend %table;
     color: white;
+    width: 100%;
 }
 
 .btn__form1{
@@ -272,5 +274,97 @@ main {
     }
 }
 
+// ---------------------- media-queries--------------------------------
+
+@media(max-width:957px){
+    .link, .Dashboard, #arrow{
+        display: none;
+    }
+    li{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media(max-width:875px){
+    html{
+        font-size: 45%;
+        overflow-x: hidden;
+    }
+    .end-container, .title-con{
+        display: none;
+    }
+    .my__nav{
+        display: flex;
+        flex-direction: row;
+   }
+   aside{
+       background-color: $maincolor;
+   }
+   .sect2{
+        margin: 0 11rem;
+   }
+   .form__add{
+       width: 80%;
+   }
+}
+@media(max-width:705px){
+    html{
+        font-size: 35%;
+    }
+    .my__nav{
+        li{
+            .icons{
+                width: 4.5rem;
+                height: 4.5rem;
+            }
+        }
+    }
+    .btn__form1{
+        padding: 2rem 3rem;
+        font-size: 2rem;
+    }
+
+}
+@media(max-width:600px){
+    .sect2{
+        margin: 0 5rem;
+    }
+    .input{
+        width: 130%;
+        margin-right: 15rem;   
+    }
+}
+@media(max-width:527px){
+    .sect2{
+        margin: 0 1rem;
+    }
+
+}
+@media(max-width:491px){
+    .table__n{
+        padding: 1rem 4rem;
+    }
+}
+@media(max-width:445px){
+    .table__n{
+        padding: 1rem 3rem;
+    }
+}
+@media(max-width:415px){
+    .sect2{
+        .group1{
+            .s__group2{
+                width: 90%;
+                margin: 4px;
+                margin-left: 6rem;
+            }
+            .s__group1{
+                display: none;
+            }
+        }
+    }
+}
 
 
