@@ -55,8 +55,8 @@
     </aside>
     
     <?php
-        //  include "charts.php";
-         include "modify.php";
+         include "charts.php";
+        //  include "modify.php";
     ?>
 
     <script src="scripts/main.js"></script>

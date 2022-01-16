@@ -16,7 +16,7 @@
             <div class="group1">
     
                 <div class="s__group1">
-                    <div class="table__a">Product Name</div>
+                    <div class="table__a">Product</div>
                     <div class="table__a">Price</div>
                     <div class="table__a">Quantity</div>
                     <div class="table__a">Categories</div>
@@ -34,16 +34,6 @@
                 </div>
     
                 <!-- ------------------------------------ -->
-                <div class="s__group2">
-                    <div class="table__n">Galaxy S20</div>
-                    <div class="table__n">12000</div>
-                    <div class="table__n">25</div>
-                    <div class="table__n">Phones</div>
-    
-                    <a href="#"><img src="imgs/edit.png" width="30" height="30" class="edit__delete" title="edit"></a>
-                    <a href="#"><img src="imgs/delete-elem.png" width="30" height="30" class="edit__delete img_marg" title="delete"></a>
-                    <a href="#"><img src="imgs/show.png" width="30" height="30" class="edit__delete img_marg" title="show"></a>
-                </div>
                 <div class="s__group2">
                     <div class="table__n">Galaxy S20</div>
                     <div class="table__n">12000</div>

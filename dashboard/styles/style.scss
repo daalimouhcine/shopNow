@@ -20,6 +20,19 @@ html{
 body{
     display: flex;
     background-color: $maincolor;
+    overflow-x: hidden;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    width: 80%;
+    .section1,.section2,.section3{
+        display: flex;
+        justify-content: center;
+        gap: 12rem;
+    }
 }
 
 aside {
@@ -43,7 +56,6 @@ aside {
         width: 90%;
         color: white;
         font-size: 3rem;
-        margin:30px 0 30px;
     }
     
     .hmb__menu{
@@ -186,14 +198,13 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5rem;
     padding: 3rem;
     width: 60%;
 }
 
 .input{
-    padding: 1rem;
-    width: 60%;
+    padding: 1.2rem;
+    width: 75%;
 }
 
 .sect1{
@@ -205,12 +216,13 @@ main {
 %flex_row{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 %table{
     gap: 1rem;
     padding: 1rem 5rem;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin: 0 auto;
 }
 
@@ -218,7 +230,6 @@ main {
     display: flex;
     justify-content: center;
     border-radius: 6%;
-    margin-top: 3rem;
     width: 60%;
     margin: 0 auto;
     .group1{
@@ -227,9 +238,12 @@ main {
         .s__group1{
             @extend %flex_row;
             background-color: $maincolor;
+            
         }
         .s__group2{
             @extend %flex_row;
+            align-items: center;
+            justify-content: center;
             background-color: $main2color;
             width: 112%;
             border-radius: 5px;
@@ -249,11 +263,13 @@ main {
 .table__a{
     @extend %table;
     color: rgba(255, 255, 255, 0.767);
+    width: 100%;
 }
 
 .table__n{
     @extend %table;
     color: white;
+    width: 100%;
 }
 
 .btn__form1{
@@ -272,5 +288,131 @@ main {
     }
 }
 
+//-----------------
 
+.p-prod{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 4rem;
+    .prod{
+        padding: 8.5rem 5rem;
+        background-color: red;
+        width: 20%;
+        border-radius: 4%;
+    }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 13%;
+    &:hover{
+        box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+    }
+    img{
+        width: 100%;
+    }
+    h4,p{
+        color: white;
+        font-weight: 700;
+    }
+  }
+
+  .containerr {
+    padding: 2px 16px;
+  }
+
+// ---------------------- media-queries--------------------------------
+
+@media(max-width:957px){
+    .link, .Dashboard, #arrow{
+        display: none;
+    }
+    li{
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media(max-width:875px){
+    html{
+        font-size: 45%;
+        overflow-x: hidden;
+    }
+    .end-container, .title-con{
+        display: none;
+    }
+    .my__nav{
+        display: flex;
+        flex-direction: row;
+   }
+   aside{
+       background-color: $maincolor;
+   }
+   .sect2{
+        margin: 0 11rem;
+   }
+   .form__add{
+       width: 80%;
+   }
+}
+@media(max-width:705px){
+    html{
+        font-size: 35%;
+    }
+    .my__nav{
+        li{
+            .icons{
+                width: 4.5rem;
+                height: 4.5rem;
+            }
+        }
+    }
+    .btn__form1{
+        padding: 2rem 3rem;
+        font-size: 2rem;
+    }
+
+}
+@media(max-width:600px){
+    .sect2{
+        margin: 0 5rem;
+    }
+    .input{
+        width: 130%;
+        margin-right: 15rem;   
+    }
+}
+@media(max-width:527px){
+    .sect2{
+        margin: 0 1rem;
+    }
+
+}
+@media(max-width:491px){
+    .table__n{
+        padding: 1rem 4rem;
+    }
+}
+@media(max-width:445px){
+    .table__n{
+        padding: 1rem 3rem;
+    }
+}
+@media(max-width:415px){
+    .sect2{
+        .group1{
+            .s__group2{
+                width: 90%;
+                margin: 4px;
+                margin-left: 6rem;
+            }
+            .s__group1{
+                display: none;
+            }
+        }
+    }
+}
 
