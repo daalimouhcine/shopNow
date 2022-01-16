@@ -11,3 +11,9 @@ hmb__menu.addEventListener("click", () => {
 	}
 	aside.classList.toggle("hide");
 });
+
+let logout = document.getElementById("logout-bt");
+
+logout.onclick = () => {
+	window.location = "../login/";
+}

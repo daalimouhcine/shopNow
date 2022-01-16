@@ -33,7 +33,7 @@ const verifyInput = () => {
     }
 
     if (emailValid && passwordValid) {
-        window.location = "../dashboard/";
+        window.location = "../../dashboard/index.php";
     }
 
 }

@@ -61,7 +61,7 @@ aside {
   width: 10%;
   background-color: transparent;
   border: 0;
-  color: white;
+  color: #26e17f;
   font-size: 20px;
   cursor: pointer;
 }
@@ -71,16 +71,20 @@ aside {
 }
 
 .my__nav {
-  width: 80%;
+  width: 100%;
   list-style: none;
 }
 
 .my__nav li {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px 10px 10px 0;
-  margin: 10px 10px 10px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin: 10px;
   cursor: pointer;
   border-radius: 10px;
   -webkit-transition: background 300ms linear;
@@ -91,15 +95,76 @@ aside {
   background-color: #112023b7;
 }
 
+.my__nav li.on-page {
+  background-color: #112023;
+}
+
 .my__nav li .icons {
   width: 3rem;
   height: 3rem;
-  margin-left: 20px;
 }
 
 .my__nav li a {
-  padding: 0 5px;
+  padding: 5px;
   margin-left: 10px;
+}
+
+.end-container {
+  width: 80%;
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.end-container div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+  padding: 10px 0;
+  -webkit-transition: background 300ms linear;
+  transition: background 300ms linear;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.end-container div:hover {
+  background-color: #112023b7;
+}
+
+.end-container div .logout-icons {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 5px;
+}
+
+.end-container div .logout-link {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.end-container .copyright {
+  height: 50px;
+  font-size: 1.3rem;
+  color: white;
+  text-align: center;
 }
 
 .hide {
@@ -110,24 +175,20 @@ aside {
   display: none;
 }
 
-.hide .my__nav li .icons {
-  margin-left: 10px;
+.hide #arrow {
+  margin-left: -7px;
 }
 
 .hide .my__nav li a {
   display: none;
 }
 
-.hide .end-container div .logout-icons {
-  margin-left: 85px;
-}
-
 .hide .end-container div .logout-link {
-  visibility: hidden;
+  display: none;
 }
 
 .hide .end-container .copyright {
-  visibility: hidden;
+  display: none;
 }
 
 .menu__logo {
@@ -145,72 +206,14 @@ aside {
 
 .link {
   width: 100%;
-  font-size: 1.8rem;
+  font-size: 16px;
   color: white;
   text-decoration: none;
-}
-
-.link:hover {
-  color: whitesmoke;
-}
-
-.end-container {
-  margin-top: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.end-container div {
-  width: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 20px 0;
-  padding: 10px 0;
-  -webkit-transition: background 300ms linear;
-  transition: background 300ms linear;
-  border-radius: 10px;
-}
-
-.end-container div:hover {
-  background-color: #112023b7;
-}
-
-.end-container div .logout-icons {
-  width: 3rem;
-  height: 3rem;
-  margin-left: 0px;
-}
-
-.end-container div .logout-link {
-  padding: 0 5px;
-  padding: 0 10px;
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
-}
-
-.end-container .copyright {
-  height: 50px;
-  font-size: 1.5rem;
-  color: white;
-  text-align: center;
-  padding: 0 10px;
 }
 
 main {
   width: 80%;
+  margin: 0 auto;
 }
 
 .form__add {
@@ -235,6 +238,7 @@ main {
 }
 
 .sect1 {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
