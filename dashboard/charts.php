@@ -1,6 +1,5 @@
 <?php
     echo '
-    <main>
         <h1>big view of your storage</h1>
         <div class="pro-info">
             <div class="elem pattern-cross-dots-xl">
@@ -40,6 +39,5 @@
             </div>
 
         </div>
-    </main>
     ';
 ?>

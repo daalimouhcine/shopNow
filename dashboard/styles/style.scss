@@ -26,7 +26,6 @@ body{
 main{
     display: flex;
     flex-direction: column;
-    margin-top: 10rem;
     width: 80%;
     .section1,.section2,.section3{
         display: flex;
@@ -56,7 +55,6 @@ aside {
         width: 90%;
         color: white;
         font-size: 3rem;
-        margin:3rem 0 3rem;
     }
     
     .hmb__menu{
@@ -94,10 +92,10 @@ aside {
         .icons{
             width: 3rem;
             height: 3rem;
+            cursor: pointer;
         }
-        a {
-            padding:5px;
-            margin-left: 10px;
+        label {
+            cursor: pointer;
         }
     }
 }
@@ -137,11 +135,9 @@ aside {
     }
     
     .copyright{
-        height: 50px;
         font-size: 1.3rem;
         color: white;
         text-align: center;
-
     }
 }
 
@@ -155,7 +151,7 @@ aside {
     }
     .my__nav{  
         li {
-            a{
+            input{
                display: none;
            }
         }  
@@ -187,13 +183,12 @@ aside {
     font-size: 16px;
     color: white;
     text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
 }
 
-
-main {
-    width: 80%;
-    margin: 0 auto;
-}
 
 .form__add{
     display: flex;
@@ -222,9 +217,9 @@ main {
 
 %table{
     gap: 1rem;
-    padding: 1rem 5rem;
+    padding: 1rem;
     font-size: 1.5rem;
-    margin: 0 auto;
+    margin: 0 7px;
 }
 
 .sect2{
@@ -232,38 +227,39 @@ main {
     justify-content: center;
     border-radius: 6%;
     width: 60%;
-    margin: 0 auto;
-    margin-top: 10rem;
     .group1{
         display: flex;
         flex-direction: column;
+        width: 100%;
         .s__group1{
             @extend %flex_row;
             background-color: $maincolor;
-            
         }
         .s__group2{
             @extend %flex_row;
+            align-items: center;
+            justify-content: center;
             background-color: $main2color;
-            width: 112%;
+            width: 100%;
             border-radius: 5px;
             margin: 4px;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 5px
+            }
         }
     }
 }
 
-.edit__delete{
-    margin-top: 5px;
-}
-
-.img_marg{
-    margin-left: 1rem;
-}
 
 .table__a{
     @extend %table;
     color: rgba(255, 255, 255, 0.767);
     width: 100%;
+    flex-basis: 20%;
 }
 
 .table__n{
@@ -291,37 +287,30 @@ main {
 // ---------------------- media-queries--------------------------------
 
 @media(max-width:957px){
+    aside {
+        width: 7%;
+    }
     .link, .Dashboard, #arrow{
         display: none;
     }
     li{
         display: flex;
         justify-content: center;
+        img {
+            margin-left: -10px !important;
+        }
     }
+    .end-container {
+        div {
+            .logout-link {
+                display: none;
+            }
+        }
+       .copyright{
+            display: none;
+        }
+   }
 
-}
-
-@media(max-width:875px){
-    html{
-        font-size: 45%;
-        overflow-x: hidden;
-    }
-    .end-container, .title-con{
-        display: none;
-    }
-    .my__nav{
-        display: flex;
-        flex-direction: row;
-   }
-   aside{
-       background-color: $maincolor;
-   }
-   .sect2{
-        margin: 0 11rem;
-   }
-   .form__add{
-       width: 80%;
-   }
 }
 @media(max-width:705px){
     html{
@@ -346,8 +335,7 @@ main {
         margin: 0 5rem;
     }
     .input{
-        width: 130%;
-        margin-right: 15rem;   
+        width: 100%;
     }
 }
 @media(max-width:527px){
@@ -361,11 +349,13 @@ main {
         padding: 1rem 4rem;
     }
 }
+
 @media(max-width:445px){
     .table__n{
         padding: 1rem 3rem;
     }
 }
+
 @media(max-width:415px){
     .sect2{
         .group1{
@@ -381,43 +371,5 @@ main {
     }
 }
 
-@media(max-width:600px){
-    .sect2{
-        margin: 0 5rem;
-    }
-    .input{
-        width: 130%;
-        margin-right: 15rem;   
-    }
-}
-@media(max-width:527px){
-    .sect2{
-        margin: 0 1rem;
-    }
 
-}
-@media(max-width:491px){
-    .table__n{
-        padding: 1rem 4rem;
-    }
-}
-@media(max-width:445px){
-    .table__n{
-        padding: 1rem 3rem;
-    }
-}
-@media(max-width:415px){
-    .sect2{
-        .group1{
-            .s__group2{
-                width: 90%;
-                margin: 4px;
-                margin-left: 6rem;
-            }
-            .s__group1{
-                display: none;
-            }
-        }
-    }
-}
 

@@ -8,7 +8,7 @@
     </section>
         <section class="sect2">
             <div class="group1">
-            
+    
                 <div class="s__group1">
                     <div class="table__a">Product Name</div>
                     <div class="table__a">Price</div>
@@ -22,8 +22,7 @@
                     <div class="table__n">25</div>
                     <div class="table__n">Phones</div>
     
-                    <a href="#"><img src="imgs/add.png" width="30" height="30" class="edit__delete" title="add"></a>
-                    <a href="#"><img src="imgs/remove.png" width="30" height="30" class="edit__delete img_marg" title="remove"></a>
+                    <a href="#"><img src="imgs/bail.png" width="30" height="30" class="edit__delete img_marg" title="delete"></a>
                 </div>
     
                 <!-- ------------------------------------ -->
@@ -33,8 +32,7 @@
                     <div class="table__n">25</div>
                     <div class="table__n">Phones</div>
     
-                    <a href="#"><img src="imgs/add.png" width="30" height="30" class="edit__delete" title="add"></a>
-                    <a href="#"><img src="imgs/remove.png" width="30" height="30" class="edit__delete img_marg" title="remove"></a>
+                    <a href="#"><img src="imgs/bail.png" width="30" height="30" class="edit__delete img_marg" title="delete"></a>
                 </div>
                 <div class="s__group2">
                     <div class="table__n">Galaxy S20</div>
@@ -42,8 +40,7 @@
                     <div class="table__n">25</div>
                     <div class="table__n">Phones</div>
     
-                    <a href="#"><img src="imgs/add.png" width="30" height="30" class="edit__delete" title="add"></a>
-                    <a href="#"><img src="imgs/remove.png" width="30" height="30" class="edit__delete img_marg" title="remove"></a>
+                    <a href="#"><img src="imgs/bail.png" width="30" height="30" class="edit__delete img_marg" title="delete"></a>
                 </div>
                 <div class="s__group2">
                     <div class="table__n">Galaxy S20</div>
@@ -51,8 +48,7 @@
                     <div class="table__n">25</div>
                     <div class="table__n">Phones</div>
     
-                    <a href="#"><img src="imgs/add.png" width="30" height="30" class="edit__delete" title="add"></a>
-                    <a href="#"><img src="imgs/remove.png" width="30" height="30" class="edit__delete img_marg" title="remove"></a>
+                    <a href="#"><img src="imgs/bail.png" width="30" height="30" class="edit__delete img_marg" title="delete"></a>
                 </div>
                 <div class="s__group2">
                     <div class="table__n">Galaxy S20</div>
@@ -60,8 +56,7 @@
                     <div class="table__n">25</div>
                     <div class="table__n">Phones</div>
     
-                    <a href="#"><img src="imgs/add.png" width="30" height="30" class="edit__delete" title="add"></a>
-                    <a href="#"><img src="imgs/remove.png" width="30" height="30" class="edit__delete img_marg" title="remove"></a>
+                    <a href="#"><img src="imgs/bail.png" width="30" height="30" class="edit__delete img_marg" title="delete"></a>
                 </div>
     
             </div>

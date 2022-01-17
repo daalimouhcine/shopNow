@@ -33,7 +33,7 @@ const verifyInput = () => {
     }
 
     if (emailValid && passwordValid) {
-        window.location = "../dashboard/index.html";
+        window.location = "../dashboard/index.php";
     }
 
 }
@@ -54,9 +54,7 @@ const successMessage = input => {
     inputContainer.className = "input-container success";
 }
 
-// const isValidEmail = email => {
-// 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-// }
+
 const validateEmail = (email) => {
     return String(email).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
   };
