@@ -1,5 +1,8 @@
 main {
   height: 100vh;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,6 +37,7 @@ main .pro-info {
 }
 
 main .pro-info .elem {
+  min-width: 200px;
   width: 31%;
   max-width: 350px;
   height: 150px;
@@ -51,6 +55,7 @@ main .pro-info .elem {
   color: #26e18069;
   border-radius: 10px;
   padding: 10px 20px;
+  margin: 10px 0;
 }
 
 main .pro-info .elem .elem-h {

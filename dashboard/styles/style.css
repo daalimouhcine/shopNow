@@ -295,7 +295,7 @@ form {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 6%;
-  width: 60%;
+  width: 70%;
 }
 
 .sect2 .group1 {
@@ -306,7 +306,9 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .sect2 .group1 .s__group1 {
@@ -321,7 +323,9 @@ form {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #1a4c57;
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   border-radius: 5px;
   margin: 4px;
 }
@@ -434,6 +438,9 @@ form {
 }
 
 @media (max-width: 445px) {
+  main {
+    width: 90%;
+  }
   .table__n {
     padding: 1rem 3rem;
   }
@@ -441,9 +448,7 @@ form {
 
 @media (max-width: 415px) {
   .sect2 .group1 .s__group2 {
-    width: 90%;
     margin: 4px;
-    margin-left: 6rem;
   }
   .sect2 .group1 .s__group1 {
     display: none;
