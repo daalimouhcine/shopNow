@@ -18,3 +18,11 @@ let logout = document.getElementById("logout-bt");
 // 	window.location = "../../login/index.php";
 // }
 
+
+// let links = document.querySelectorAll(".link");
+
+// links.forEach(x => {
+// 	x.addEventListener("click", e => {
+// 		e.preventDefault();
+// 	})
+// })

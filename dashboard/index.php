@@ -23,9 +23,9 @@
         ?>
     </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/graphs.css">
     <link rel="stylesheet" href="styles/getall.css">
+    <link rel="stylesheet" href="styles/style.css">
 
     <link href="https://unpkg.com/pattern.css" rel="stylesheet">
     <link rel="shortcut icon" href="../login/images/logo.png">
@@ -56,7 +56,7 @@
             </button>
         </div>
 
-        <form method="POST">
+        <form action="index.php" method="POST">
             <ul class="my__nav" id="my__nav">       
                 <label for="dashboard">
                      <li class="<?php echo !isset($_POST["view"]) && !isset($_POST["add"]) && !isset($_POST["modify"]) && !isset($_POST["delete"]) ? "on-page" : "" ?>" data-link="dashboard" onclick="selectLink(this)">
