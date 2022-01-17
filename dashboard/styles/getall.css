@@ -1,0 +1,54 @@
+main .section1, main .section2, main .section3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12rem;
+}
+
+.p-prod {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5rem;
+  gap: 4rem;
+}
+
+.p-prod .prod {
+  padding: 8.5rem 5rem;
+  background-color: red;
+  width: 20%;
+  border-radius: 4%;
+}
+
+.card {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 13%;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h4, .card p {
+  color: white;
+  font-weight: 700;
+}
+
+.containerr {
+  padding: 2px 16px;
+}
+/*# sourceMappingURL=getall.css.map */

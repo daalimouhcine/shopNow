@@ -14,6 +14,7 @@ hmb__menu.addEventListener("click", () => {
 
 let logout = document.getElementById("logout-bt");
 
-logout.onclick = () => {
-	window.location = "../../login/index.php";
-}
+// logout.onclick = () => {
+// 	window.location = "../../login/index.php";
+// }
+
