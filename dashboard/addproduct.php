@@ -27,7 +27,7 @@
                     <div class="table__n">25</div>
                     <div class="table__n">Phones</div>
 
-                    <a href="edit.php"><img src="imgs/edit.png" width="30" height="30" class="edit__delete" title="edit"></a>
+                    <a href="edit.php"><img src="imgs/modify.png" width="30" height="30" class="edit__delete" title="edit"></a>
                     <a href="#"><img src="imgs/delete.png" width="30" height="30" class="edit__delete img_marg" title="delete"></a>
                     <a href="getOne.php"><img src="imgs/show.png" width="30" height="30" class="edit__delete img_marg" title="show"></a>
                 </div>
