@@ -306,9 +306,7 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
 }
 
 .sect2 .group1 .s__group1 {
@@ -323,9 +321,7 @@ form {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #1a4c57;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   border-radius: 5px;
   margin: 4px;
 }
@@ -419,6 +415,9 @@ form {
 @media (max-width: 600px) {
   .sect2 {
     margin: 0 5rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .input {
     width: 100%;
@@ -431,22 +430,18 @@ form {
   }
 }
 
-@media (max-width: 491px) {
-  .table__n {
-    padding: 1rem 4rem;
-  }
-}
-
 @media (max-width: 445px) {
   main {
     width: 90%;
   }
-  .table__n {
-    padding: 1rem 3rem;
-  }
 }
 
 @media (max-width: 415px) {
+  .sect2 .group1 {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
   .sect2 .group1 .s__group2 {
     margin: 4px;
   }
