@@ -9,8 +9,9 @@
 
 
         echo '
+            <iframe name="hidden-frame" class="hidden-frame"></iframe>
             <section class="sect1">
-                <form action="" method="get" class="form__add">
+                <form action="delete.php" method="GET" target="hidden-frame" class="form__add">
                     <input type="text" placeholder="Product Name" class="input">
                     <input type="submit" value="Search Product" class="btn__form1">
                 </form>

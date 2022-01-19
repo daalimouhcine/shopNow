@@ -372,6 +372,14 @@ form {
           transform: scale(1.1);
 }
 
+.hidden-frame {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}
+
 @media (max-width: 957px) {
   aside {
     width: 7%;

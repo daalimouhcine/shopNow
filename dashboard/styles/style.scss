@@ -287,6 +287,16 @@ form {
     }
 }
 
+
+.hidden-frame {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+}
+
+
 // ---------------------- media-queries--------------------------------
 
 @media(max-width:957px){
