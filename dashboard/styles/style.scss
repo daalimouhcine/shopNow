@@ -154,10 +154,8 @@ form {
         margin-left: -7px;
     }
     .my__nav{  
-        li {
-            input{
-               display: none;
-           }
+        .link {
+            display: none; 
         }  
    }
    .end-container {
@@ -264,7 +262,9 @@ form {
     width: 100%;
     flex-basis: 20%;
 }
-
+#add-table__a {
+    flex-basis: 25%;
+}
 .table__n{
     @extend %table;
     color: white;
@@ -279,6 +279,7 @@ form {
 	background-color: $main2color;
 	color: white;
 	margin-top: 2rem;
+    cursor: pointer;
 	transition: transform 330ms linear , background 330ms linear;
     &:hover{
         background-color: white;
