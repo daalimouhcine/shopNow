@@ -25,13 +25,14 @@
         foreach($products as $product) {
             echo "
                 <div class='s__group2'>
+                    <div style='display:none;'>$product[id]</div>
                     <div class='table__n'>$product[name]</div>
                     <div class='table__n'>$product[price]</div>
                     <div class='table__n'>$product[qty]</div>
                     <div class='table__n'>Phones</div>
 
-                    <a href='#'><img src='imgs/add.png' width='30' height='30' class='edit__delete' title='add'></a>
-                    <a href='#'><img src='imgs/remove.png' width='30' height='30' class='edit__delete img_marg' title='remove'></a>
+                    <a onclick='modifyProduct(this)'><img src='imgs/add.png' width='30' height='30' class='edit__add' title='add'></a>
+                    <a onclick='modifyProduct(this)'><img src='imgs/remove.png' width='30' height='30' class='edit__remove' title='remove'></a>
                 </div>
             ";
         }
@@ -41,6 +42,17 @@
             </div>
         </section>
         ';    
+
+    // input alert.
+    // echo '
+    //     <div class="updateAlert">
+    //         <h3></h3>
+    //         <form action="edit.php" method="GET" target="hidden-frame" class="form__add">
+    //             <input type="text" placeholder="Product Name" class="input">
+    //             <input type="submit" value="Search Product" class="btn__form1">
+    //         </form>
+    //     </div>
+    // ';
     
     $connect = null;
 

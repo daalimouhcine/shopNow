@@ -27,7 +27,7 @@ sideLinks.forEach(x => {
 	x.addEventListener("click", (e) => {
 		e.preventDefault();
 		creatCookie("currentPage", x.lastElementChild.textContent, 30);
-		location.reload();
+		window.location.reload(true);
 	});
 });
 
@@ -49,18 +49,44 @@ hmb__menu.addEventListener("click", () => {
 
 
 // reload page after submitting to see the change on page.
-let submitButt = document.querySelector("form");
-submitButt.addEventListener("submit", () => {
-	location.reload();
+let submitForm = document.querySelector("form");
+submitForm.addEventListener("submit", (e) => {
+
+	window.location.reload();
 });
 
 
-//start deleting product part
+// deleting product part
 let deleteId = document.querySelectorAll('.delete-btn');
+creatCookie('id', 0, 1);
 deleteId.forEach(x => {
 	x.addEventListener('click', (e) => {
 		e.preventDefault;
-		creatCookie('id', x.parentNode.firstElementChild.textContent, 1);
-		location.reload();
+		let pElement = x.parentNode;
+		x.parentNode.classList.add('pDelete');
+
+		creatCookie('deleteId', x.parentNode.firstElementChild.textContent, 1);
+
+		setTimeout(() => {
+			pElement.style.display = "none";
+		}, 1000);
+		
+		window.location.reload();
 	})
-})
+});
+
+
+// start modifying the product
+// const modifyProduct = (p) => {
+// 	let typ = p.firstElementChild.className;
+// 	let updateId = p.parentNode.firstElementChild.textContent;
+
+	
+
+// 	creatCookie('updateProduct', typ, 1);
+// 	creatCookie('updateId', updateId, 1);
+
+	
+// }
+
+

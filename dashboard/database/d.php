@@ -1,17 +1,20 @@
 <?php
 
-    if (isset($_COOKIE["id"])) {
-        $selectDeleteId = $_COOKIE["id"];
+    if (isset($_COOKIE['deleteId'])) {
+        $deleteId = $_COOKIE['deleteId'];
 
-        require "connect.php";
+        require 'connect.php';
 
-        $deleteQuery = "DELETE FROM product WHERE id = :deleteId";
+        $deleteQuery = "DELETE FROM product WHERE id = :selectedId";
         $deleteStatement = $connect->prepare($deleteQuery);
         $deleteStatement->execute([
-            ':deleteId' => $selectDeleteId
+            ':selectedId' => $deleteId
         ]);
 
-        setcookie('id', '', time() - 3600, '/');
+        setcookie('deleteId', '', time()-3600, '/');
+
+        header('Location:./');
+
     }
 
 ?>

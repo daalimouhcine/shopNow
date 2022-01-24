@@ -32,7 +32,7 @@
                     <div class='table__n'>$product[qty]</div>
                     <div class='table__n'>Phones</div>
 
-                    <a href='#' class='delete-btn'><img src='imgs/bail.png' width='30' height='30' class='edit__delete img_marg' title='delete'></a>
+                    <a class='delete-btn'><img src='imgs/bail.png' width='30' height='30' class='edit__delete img_marg' title='delete'></a>
                 </div>
                 ";   
         }

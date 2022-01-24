@@ -65,20 +65,20 @@
                         </div>
                     </div>
                     <p class="or-email">or do it via E-mail</p>
-                    <form id="form" action="index.php" method="POST">
-                        <div class="input-container">
+                    <form id="form" action="valideLogin.php" method="POST">
+                        <div  <?php echo isset($_GET["class"]) ? 'class="input-container error"' :  'class="input-container"' ?> >
                             <label for="email">E-mail</label>
                             <input type="text" id="email" name="email" placeholder="@gmail.com">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
-                            <p>error message</p>
+                            <p>some thing is not correct check again</p>
                         </div>
-                        <div class="input-container">
+                        <div <?php echo isset($_GET["class"]) ? 'class="input-container error"' :  'class="input-container"' ?> >
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password" placeholder="Password">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
-                            <p>error message</p>
+                            <p>some thing is not correct check again</p>
                         </div>
                         <div class="form-check-pass">
                             <div>
@@ -93,7 +93,7 @@
                 </div>
             </div>
         </main> 
-        <script src="scripts/validation.js"></script>
+        <!-- <script src="scripts/validation.js"></script> -->
         <script src="scripts/slider.js"></script>
     </body>
 </html>

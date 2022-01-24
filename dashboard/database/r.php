@@ -1,11 +1,10 @@
-<?php 
+<?php
 
-    require "connect.php";
-    
-    $selectQuery = "SELECT * FROM product";
-    $selectStatement = $connect->prepare($selectQuery);
-    $selectStatement->execute();
+    require 'connect.php';
 
-    $products = $selectStatement->fetchAll(PDO::FETCH_ASSOC);
+    $readQuery = 'SELECT * FROM product';
+    $readStatement = $connect->prepare($readQuery);
+    $readStatement->execute();
+    $products = $readStatement->fetchAll(PDO::FETCH_ASSOC);
 
-?> 
+?>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<?php $pageCookie = $_COOKIE["currentPage"]; ?>
+<?php isset($_COOKIE['currentPage']) ? $pageCookie = $_COOKIE["currentPage"] : ''; ?>
 <html lang="en">
 <head>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopNow | <?php echo "$pageCookie"; ?></title>
+    <title>ShopNow | <?php echo isset($_COOKIE['currentPage']) ? $pageCookie : 'Dashboard' ?> </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/graphs.css">
     <link rel="stylesheet" href="styles/getall.css">
@@ -19,7 +19,7 @@
     <aside>
         <div class="title-con">
             <h1 class="Dashboard">
-                <?php echo "$pageCookie"; ?>
+                <?php echo isset($_COOKIE['currentPage']) ? $pageCookie : 'Dashboard' ?>
             </h1>
     
             <button class="hmb__menu" id="hmb__menu">
@@ -60,26 +60,33 @@
     
     <main>
         <?php
-            if ($pageCookie == "Dashboard") {
+            if(isset($_COOKIE['currentPage'])) {
+                if ($pageCookie == "Dashboard") {
+                    include "charts.php";
+    
+                } elseif ($pageCookie == "View Products") {
+                    include "getall.php";
+    
+                } elseif ($pageCookie == "Add Products") {
+                    include "addproduct.php";
+    
+                } elseif ($pageCookie == "Modify Products") {
+                    include "update.php";
+    
+                } elseif ($pageCookie == "Delete Products") {
+                    include "delete.php";
+    
+                }
+
+            } else {
                 include "charts.php";
-
-            } elseif ($pageCookie == "View Products") {
-                include "getall.php";
-
-            } elseif ($pageCookie == "Add Products") {
-                include "addproduct.php";
-
-            } elseif ($pageCookie == "Modify Products") {
-                include "edit.php";
-
-            } elseif ($pageCookie == "Delete Products") {
-                include "delete.php";
             }
         ?>
     </main>
     
 
     <script src="scripts/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="scripts/graph.js"></script>
 </body>

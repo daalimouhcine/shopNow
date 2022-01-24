@@ -324,6 +324,7 @@ form {
   width: 100%;
   border-radius: 5px;
   margin: 4px;
+  opacity: 1;
 }
 
 .sect2 .group1 .s__group2 a {
@@ -337,6 +338,64 @@ form {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 5px;
+  cursor: pointer;
+}
+
+.sect2 .group1 .pDelete {
+  -webkit-animation: pDelete 2s linear  1 normal forwards;
+          animation: pDelete 2s linear  1 normal forwards;
+}
+
+@-webkit-keyframes pDelete {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg) translateY(0px);
+            transform: scale(1) rotate(0deg) translateY(0px);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.95) rotate(5deg) rotateY(5deg) translateY(5px);
+            transform: scale(0.95) rotate(5deg) rotateY(5deg) translateY(5px);
+    opacity: 0.6;
+  }
+  90% {
+    -webkit-transform: scale(0.91) rotate(9deg) translateY(18px);
+            transform: scale(0.91) rotate(9deg) translateY(18px);
+    opacity: 0.4;
+  }
+  99% {
+    -webkit-transform: scale(0.9) rotate(5deg) translateY(5px);
+            transform: scale(0.9) rotate(5deg) translateY(5px);
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pDelete {
+  0% {
+    -webkit-transform: scale(1) rotate(0deg) translateY(0px);
+            transform: scale(1) rotate(0deg) translateY(0px);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.95) rotate(5deg) rotateY(5deg) translateY(5px);
+            transform: scale(0.95) rotate(5deg) rotateY(5deg) translateY(5px);
+    opacity: 0.6;
+  }
+  90% {
+    -webkit-transform: scale(0.91) rotate(9deg) translateY(18px);
+            transform: scale(0.91) rotate(9deg) translateY(18px);
+    opacity: 0.4;
+  }
+  99% {
+    -webkit-transform: scale(0.9) rotate(5deg) translateY(5px);
+            transform: scale(0.9) rotate(5deg) translateY(5px);
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .table__a {
