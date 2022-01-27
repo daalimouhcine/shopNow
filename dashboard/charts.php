@@ -1,11 +1,19 @@
-<?php
-    echo '
-    <main>
+<?php   
+
+    require_once 'db/connect.php';
+
+    $selectQuery = 'SELECT * FROM products';
+    $selectStatement = $conn->prepare($selectQuery); // method parameter binding.
+    $selectStatement->execute();
+
+    $productNum = $selectStatement->rowCount() ;
+
+?>
         <h1>big view of your storage</h1>
         <div class="pro-info">
             <div class="elem pattern-cross-dots-xl">
                 <div class="elem-h">
-                    <b>150</b>
+                    <b><?= $productNum ?></b>
                     <img src="imgs/product-num.png" alt="Products icon">
                 </div>
                 <hr>
@@ -38,8 +46,4 @@
             <div class="graph-container">
                 <canvas id="myChart_3"></canvas>
             </div>
-
         </div>
-    </main>
-    ';
-?>

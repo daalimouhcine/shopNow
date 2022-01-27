@@ -1,41 +1,13 @@
-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 5rem;
-  width: 80%;
-}
-
-main .section1, main .section2, main .section3 {
+.section1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 12rem;
-}
-
-.p-prod {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 5rem;
-  gap: 4rem;
-}
-
-.p-prod .prod {
-  padding: 8.5rem 5rem;
-  background-color: red;
-  width: 20%;
-  border-radius: 4%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10rem;
 }
 
 .card {
@@ -43,7 +15,7 @@ main .section1, main .section2, main .section3 {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  width: 13%;
+  width: 15%;
 }
 
 .card:hover {
@@ -62,5 +34,10 @@ main .section1, main .section2, main .section3 {
 
 .containerr {
   padding: 2px 16px;
+}
+
+.product__qty {
+  color: white;
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=getall.css.map */
